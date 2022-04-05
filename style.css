@@ -1,0 +1,40 @@
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 2; 
+    cursor: pointer; 
+}
+
+#overlay>.form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+}
+
+#overlay form {
+    display: flex;
+    flex-direction: column;
+}
+
+.library {
+    display: flex;
+    gap: 5rem;
+}
+
+.library .card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
