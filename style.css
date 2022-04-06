@@ -1,3 +1,42 @@
+* {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    background-color: #FFFBE9;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AD8B73;
+    color: #FFFBE9;
+    padding: 1.5rem 3rem;
+    box-shadow: 0px 5px 5px #AD8B73;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 5rem;
+}
+
+button.add-book {
+    background-color: #FFFBE9;
+    color: #AD8B73;
+    border: 3px solid #AD8B73;
+    outline: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 #overlay {
     position: fixed;
     display: none;
@@ -13,11 +52,11 @@
 }
 
 #overlay>.form-wrapper {
+    background-color: #E3CAA5;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid black;
     border-radius: 15px;
     padding: 1rem 2rem;
 }
@@ -25,16 +64,107 @@
 #overlay form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
+
+#overlay input[type=text],
+input[type=number] {
+    border-radius: 15px;
+    padding: .5rem;
+    background-color: #AD8B73;
+    border: 2px solid #AD8B73;
+    color: #FFFBE9;
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 50px #AD8B73 inset;
+    -webkit-text-fill-color: #FFFBE9;
+}
+
+#overlay input:focus {
+    border: 2px solid #FFFBE9;
+    outline: none;
+}
+
+input::placeholder {
+    color: #CEAB93;
+}
+
+#overlay .checkbox-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 
 .library {
     display: flex;
     gap: 5rem;
+    padding: 4rem 5rem;
 }
 
 .library .card {
-    border: 1px solid black;
+    font-size: 1.5rem;
+    border: 3px solid #AD8B73;
+    color: #AD8B73;
+    padding: 1rem 2rem;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+}
+
+.card button {
+    font-size: 1rem;
+    background-color: #FFFBE9;
+    color: #AD8B73;
+    border: 3px solid #AD8B73;
+    border-radius: 10px;
+    width: 10rem;
+    padding: .5rem;
+}
+
+/*CSS normalize buttons*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
 }

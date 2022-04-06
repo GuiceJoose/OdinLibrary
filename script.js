@@ -6,9 +6,6 @@ const modal = document.querySelector('.form-wrapper');
 const submit = document.querySelector('#submit');
 
 
-
-
-
 newBookButton.addEventListener('click', openBookModal);
 
 overlay.addEventListener('click', function(event) {
@@ -85,12 +82,15 @@ function updateLibrary() {
     removeButtons.forEach((button)=>button.addEventListener('click', removeBook))
 }
 
-function readFlipper() {
-    if (this.textContent == 'Read') {
-        this.textContent = 'Not Read'
-    } else if (this.textContent == 'Not Read') {
-        this.textContent = 'Read'
+function readFlipper(e) {
+    let thisBook = e.target.parentNode.firstChild.textContent.replaceAll('"','');
+    let thisRead = myLibrary[myLibrary.findIndex(object => object.title == thisBook)].read
+    if (thisRead == 'Read') {
+        myLibrary[myLibrary.findIndex(object => object.title == thisBook)].read = 'Not Read'
+    } else if (thisRead == 'Not Read') {
+        myLibrary[myLibrary.findIndex(object => object.title == thisBook)].read = 'Read';
     }
+    updateLibrary();
 }
 
 function removeBook(e) {
@@ -117,3 +117,4 @@ function makeNewBook() {
     addBook(newBook);
     updateLibrary();
 }
+
