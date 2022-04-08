@@ -19,12 +19,15 @@ submit.addEventListener('click', makeNewBook)
 
 
 
-function aBook(title, author, pages, read) {
+
+class aBook {
+    constructor(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages
     this.read = read;
     }
+}
 
 
 function makeBookCards() {
