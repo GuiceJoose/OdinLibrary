@@ -18,18 +18,18 @@
         <div class="library"></div>
         <div id="overlay">
             <div class="form-wrapper">
-                <form action="">
+                <form id="book-form" action="">
                     <label for="title"></label>
-                    <input type="text" id="title" name="title" placeholder="Title">
+                    <input type="text" id="title" name="title" placeholder="Title" required>
                     <label for="author"></label>
-                    <input type="text" id="author" name="author" placeholder="Author">
+                    <input type="text" id="author" name="author" placeholder="Author" required>
                     <label for="Pages"></label>
-                    <input type="number" id="pages" name="pages" placeholder="# of Pages">
+                    <input type="number" id="pages" name="pages" placeholder="# of Pages" required>
                     <div class="checkbox-line">
                         <label for="read">Have you read it?</label>
                         <input type="checkbox" id="read" name="read">
                     </div>
-                    <button type="button" id="submit">Submit</button>
+                    <button type="submit" id="submit">Submit</button>
                 </form>
             </div>
         </div>
